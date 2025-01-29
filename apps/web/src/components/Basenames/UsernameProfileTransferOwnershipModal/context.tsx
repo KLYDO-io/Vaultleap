@@ -309,7 +309,7 @@ export default function ProfileTransferOwnershipProvider({
 
       // If the setting transaction is Idle and either
       // - Is the first transaction
-      // - Previous transaction is successful
+      // - Previous transaction is successfull
       const canCallfunction =
         ownershipSetting.status === WriteTransactionWithReceiptStatus.Idle &&
         (currentIndex === 0 ||
@@ -336,7 +336,7 @@ export default function ProfileTransferOwnershipProvider({
     () =>
       // Smart wallet: One transaction
       batchCallsStatus === BatchCallsStatus.Success ||
-      // Other wallet: 4 Transactions are successful
+      // Other wallet: 4 Transactions are successfull
       (ownershipSettings.length > 0 &&
         ownershipSettings.every(
           (ownershipSetting) =>

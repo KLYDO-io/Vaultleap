@@ -18,11 +18,11 @@ export type UseWriteBaseEnsTextRecordsProps = {
 /*
   A hook to set update TextRecords in a batch
 
-  Responsibilities:
+  Responsabilities:
   - Get existing TextRecords
   - Keep track of TextRecords updates
   - Wait for the transaction to be processed
-  - Refetch records on successful request  
+  - Refetch records on successfull request  
   - Log errors and analytics accordingly
 
 */
