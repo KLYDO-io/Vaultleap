@@ -53,25 +53,6 @@ enum AnalyticsEventImportance {
   high = 'high',
 }
 
-enum AnalyticsEventContext {
-  // Navigation/UI contexts
-  Navbar = 'navbar',
-  Build = 'build',
-  Explore = 'explore',
-  Community = 'community',
-  About = 'about',
-  Socials = 'socials',
-
-  // Feature-specific contexts
-  BasenamesClaimFrame = 'basenames_claim_frame',
-  SliceSo = 'slice.so',
-  HypersubXyz = 'hypersub.xyz',
-  HighlightXyz = 'highlight.xyz',
-  EventsXyz = 'events.xyz',
-  PaycasterCo = 'paycaster.co',
-  SocialDex = 'social-dex',
-}
-
 type CCAEventData = {
   // Standard Attributes
   action?: ActionType;
@@ -84,7 +65,7 @@ type CCAEventData = {
   message_id?: number;
   response_helpful?: boolean;
   address?: string;
-  context?: AnalyticsEventContext;
+  context?: string;
   userId?: string;
   error?: string;
   wallet_type?: string;
@@ -143,5 +124,5 @@ export function identify(event: CCAEventData) {
   }
 }
 
-export { ActionType, AnalyticsEventImportance, ComponentType, AnalyticsEventContext };
+export { ActionType, AnalyticsEventImportance, ComponentType };
 export type { AnalyticsEventData, LogEvent, CCAEventData };
